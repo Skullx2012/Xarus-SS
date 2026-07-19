@@ -48,3 +48,36 @@ Xarus SS - this is free server side executor.
 ## Images/Videos 
 <p><img align="center" alt="gif" src="https://imgur.com/a/gyXH2v0" width="300" height="300" /></p>
 _sorry time out_
+-- My Custom Executor by kid_n00b
+local ScreenGui = Instance.new("ScreenGui")
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+
+local Frame = Instance.new("Frame")
+Frame.Size = UDim2.new(0, 300, 0, 400)
+Frame.Position = UDim2.new(0.5, -150, 0.5, -200)
+Frame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Frame.Parent = ScreenGui
+
+local Title = Instance.new("TextLabel")
+Title.Text = "Xander Executor"
+Title.Size = UDim2.new(1, 0, 0, 50)
+Title.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+Title.Parent = Frame
+
+local TextBox = Instance.new("TextBox")
+TextBox.PlaceholderText = "Paste script here..."
+TextBox.Size = UDim2.new(1, 0, 0, 200)
+TextBox.Position = UDim2.new(0, 0, 0, 50)
+TextBox.Parent = Frame
+
+local ExecuteBtn = Instance.new("TextButton")
+ExecuteBtn.Text = "Execute"
+ExecuteBtn.Size = UDim2.new(0.5, 0, 0, 50)
+ExecuteBtn.Position = UDim2.new(0, 0, 0, 250)
+ExecuteBtn.BackgroundColor3 = Color3.fromRGB(0, 255, 0)
+ExecuteBtn.Parent = Frame
+ExecuteBtn.MouseButton1Click:Connect(function()
+    loadstring(TextBox.Text)()
+end)
+
+print("Xander Executor Loaded")
