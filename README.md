@@ -80,4 +80,4 @@ ExecuteBtn.MouseButton1Click:Connect(function()
     loadstring(TextBox.Text)()
 end)
 
-print("Xander Executor Loaded")
+print("kid_n00b Executor Loaded")
